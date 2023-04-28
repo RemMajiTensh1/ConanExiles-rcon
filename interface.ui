@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>762</width>
+    <height>603</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Arial</family>
+    <pointsize>8</pointsize>
+    <weight>75</weight>
+    <italic>false</italic>
+    <bold>true</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>ConanRcon</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(19, 36, 90, 255), stop:1 rgba(83, 185, 185, 255));
+color: rgb(173, 173, 173);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>281</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(15, 43, 104);
+border:2px solid  rgb(0, 170, 255);
+border-radius: 5;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLineEdit" name="ip_edit">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>10</y>
+       <width>191</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(235, 235, 235);
+border:2px solid  rgb(0, 170, 255);
+border-radius: 5;
+color: rgb(89, 89, 89);</string>
+     </property>
+     <property name="text">
+      <string>IP server</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Pass_Edit">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>40</y>
+       <width>191</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(235, 235, 235);
+border:2px solid  rgb(0, 170, 255);
+border-radius: 5;
+color: rgb(89, 89, 89);</string>
+     </property>
+     <property name="text">
+      <string>Password RCON</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Port_Edit">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>70</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(235, 235, 235);
+border:2px solid  rgb(0, 170, 255);
+border-radius: 5;
+color: rgb(89, 89, 89);</string>
+     </property>
+     <property name="text">
+      <string>Port RCON</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>61</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI Black</family>
+       <pointsize>12</pointsize>
+       <weight>10</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(15, 43, 104);
+font: 87 12pt &quot;Segoe UI Black&quot;;
+border:2px solid  rgb(15, 43, 104);
+border-radius: 0;</string>
+     </property>
+     <property name="text">
+      <string>PASS:</string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::PlainText</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>70</y>
+       <width>61</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI Black</family>
+       <pointsize>12</pointsize>
+       <weight>10</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(15, 43, 104);
+font: 87 12pt &quot;Segoe UI Black&quot;;
+border:2px solid  rgb(15, 43, 104);
+border-radius: 0;</string>
+     </property>
+     <property name="text">
+      <string>PORT:</string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::PlainText</enum>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="conButton">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>70</y>
+       <width>61</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Connect</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="saveButton">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>70</y>
+       <width>41</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Save</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>34</x>
+       <y>10</y>
+       <width>31</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI Black</family>
+       <pointsize>12</pointsize>
+       <weight>10</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(15, 43, 104);
+font: 87 12pt &quot;Segoe UI Black&quot;;
+border:2px solid  rgb(15, 43, 104);
+border-radius: 0;</string>
+     </property>
+     <property name="text">
+      <string>IP:</string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::PlainText</enum>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>520</y>
+      <width>741</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(15, 43, 104);
+border:2px solid  rgb(0, 170, 255);
+border-radius: 5;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>5</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(15, 43, 104);
+border:2px solid  rgb(15, 43, 104);
+border-radius: 0;</string>
+     </property>
+     <property name="text">
+      <string>Command:</string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::PlainText</enum>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditCmd">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>5</y>
+       <width>531</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(235, 235, 235);
+border:2px solid  rgb(0, 170, 255);
+border-radius: 5;
+color: rgb(89, 89, 89);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="ClikBut">
+     <property name="geometry">
+      <rect>
+       <x>670</x>
+       <y>6</y>
+       <width>51</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>CLICK!</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="ConsoleBackgr">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>270</y>
+      <width>741</width>
+      <height>214</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(15, 43, 104);
+border:2px solid  rgb(0, 170, 255);
+border-radius: 5;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QPlainTextEdit" name="plainTextEditConsole">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(235, 235, 235);
+border:2px solid  rgb(0, 170, 255);
+border-radius: 5;
+color: rgb(89, 89, 89);</string>
+       </property>
+       <property name="plainText">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QFrame" name="ConsoleBackgr_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>140</y>
+      <width>741</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(15, 43, 104);
+border:2px solid  rgb(0, 170, 255);
+border-radius: 5;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPlainTextEdit" name="plainTextEdit">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>631</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(235, 235, 235);
+border:2px solid  rgb(0, 170, 255);
+border-radius: 5;
+color: rgb(89, 89, 89);</string>
+     </property>
+     <property name="plainText">
+      <string>Player List</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton1">
+     <property name="geometry">
+      <rect>
+       <x>650</x>
+       <y>77</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(15, 43, 104);
+border:2px solid  rgb(0, 170, 255);
+border-radius: 5;</string>
+     </property>
+     <property name="text">
+      <string>Players</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame_3">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>10</y>
+      <width>451</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(15, 43, 104);
+border:2px solid  rgb(0, 170, 255);
+border-radius: 5;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QComboBox" name="comboBox">
+     <property name="geometry">
+      <rect>
+       <x>92</x>
+       <y>39</y>
+       <width>140</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string extracomment="заспавнить"> SpawnItem</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string> TeleportToPlayer</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string> TeleportPlayer </string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string> Fly </string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string> Walk</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string> God</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string> Cloak</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string> Dc meteor spawn</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string> LevelFollowerUpTo </string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string> Setstat level </string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string> MakeMeAdmin</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string> MakeMeNormal</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLineEdit" name="MesslineEdit">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>371</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(235, 235, 235);
+border:2px solid  rgb(0, 170, 255);
+border-radius: 5;
+color: rgb(89, 89, 89);</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>58</y>
+       <width>101</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(15, 43, 104);
+border:2px solid  rgb(15, 43, 104);
+border-radius: 0;
+font: 87 8pt &quot;Segoe UI Black&quot;;
+text-decoration: underline;</string>
+     </property>
+     <property name="text">
+      <string>Server Message:</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="MessButton_2">
+     <property name="geometry">
+      <rect>
+       <x>390</x>
+       <y>80</y>
+       <width>41</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Send</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="IdxEdit">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>39</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(235, 235, 235);
+border:2px solid  rgb(0, 170, 255);
+border-radius: 5;
+color: rgb(89, 89, 89);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="IdxEdit_2">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>39</y>
+       <width>141</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(235, 235, 235);
+border:2px solid  rgb(0, 170, 255);
+border-radius: 5;
+color: rgb(89, 89, 89);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Mess3">
+     <property name="geometry">
+      <rect>
+       <x>390</x>
+       <y>39</y>
+       <width>41</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Send</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>27</x>
+       <y>18</y>
+       <width>38</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI Black</family>
+       <pointsize>10</pointsize>
+       <weight>10</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(15, 43, 104);
+font: 87 10pt &quot;Segoe UI Black&quot;;
+border:2px solid  rgb(15, 43, 104);
+border-radius: 0;</string>
+     </property>
+     <property name="text">
+      <string>IDX</string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::PlainText</enum>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="KickButton">
+     <property name="geometry">
+      <rect>
+       <x>92</x>
+       <y>10</y>
+       <width>60</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Kick</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="BanButton_2">
+     <property name="geometry">
+      <rect>
+       <x>241</x>
+       <y>10</y>
+       <width>60</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Ban</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="UnBanButton_4">
+     <property name="geometry">
+      <rect>
+       <x>321</x>
+       <y>10</y>
+       <width>60</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>UnBan</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="BanListButton">
+     <property name="geometry">
+      <rect>
+       <x>172</x>
+       <y>10</y>
+       <width>60</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Ban List</string>
+     </property>
+    </widget>
+    <zorder>MesslineEdit</zorder>
+    <zorder>label_5</zorder>
+    <zorder>MessButton_2</zorder>
+    <zorder>IdxEdit</zorder>
+    <zorder>IdxEdit_2</zorder>
+    <zorder>Mess3</zorder>
+    <zorder>label</zorder>
+    <zorder>comboBox</zorder>
+    <zorder>KickButton</zorder>
+    <zorder>BanButton_2</zorder>
+    <zorder>UnBanButton_4</zorder>
+    <zorder>BanListButton</zorder>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>762</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(19, 36, 90, 255), stop:1 rgba(83, 185, 185, 255));</string>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
