@@ -33,6 +33,8 @@ else:
     conf = open("config.ini", "w+")
     confin = f"(ip)\n(pass)\n(7778)"
     conf.write(str(confin))
+    conf.close()
+
 def SaveConf():
     conf = open("config.ini", "w+")
     ip = form.ip_edit.text()
