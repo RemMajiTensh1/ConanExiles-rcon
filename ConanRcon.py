@@ -17,9 +17,15 @@ if os.path.exists("config.ini"):
     form.plainTextEditConsole.setPlainText(str("Конфиг найден"))
     conf = open('config.ini', "r")
     conf.close()
-    a = open('config.ini').read().split('\n')[0]
-    b = open('config.ini').read().split('\n')[1]
-    r = open('config.ini').read().split('\n')[2]
+    with open('config.ini') as f:
+        for i, line in enumerate(f):
+            line = line.strip()
+            if i == 0:
+                a = line
+            elif i == 1:
+                b = line
+            elif i == 2:
+                r = line
     rcon = MCRcon(a, b, port=int(r))
 
 else:
