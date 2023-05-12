@@ -53,6 +53,6 @@ This program was developed by RemMajiTenshi for free general use.
 
 ![image](https://user-images.githubusercontent.com/120824638/235213861-1ab6f253-9213-4d54-a9a0-2c5028282e79.png)
 
-Готовая сборка/Finished Assembly: [https://drive.google.com/file/d/16eG2FB5a7NLZT4dvNyYnQUz8aug4p1Jn/view?usp=share_link](https://drive.google.com/file/d/16eG2FB5a7NLZT4dvNyYnQUz8aug4p1Jn/view?usp=share_link)
+Готовая сборка/Finished Assembly: [[https://drive.google.com/file/d/16eG2FB5a7NLZT4dvNyYnQUz8aug4p1Jn/view?usp=share_link](https://drive.google.com/file/d/16eG2FB5a7NLZT4dvNyYnQUz8aug4p1Jn/view?usp=share_link)](https://drive.google.com/file/d/18YH2UJlD_2-R5btazxy2efJ5jN8k2kti/view?usp=share_link)
 
 Данную программу разработал RemMajiTenshi для бесплатного общего пользования.
