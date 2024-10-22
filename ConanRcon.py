@@ -1,6 +1,7 @@
-from PyQt6 import uic
-from PyQt6.QtWidgets import QApplication
-from mcrcon import MCRcon
+from PyQt5 import uic
+from PyQt5.QtWidgets import QApplication
+#from mcrcon import MCRcon
+from ConRcon import ConanExilesRCON
 import os
 
 Form, Window = uic.loadUiType("interface.ui")
@@ -26,7 +27,8 @@ if os.path.exists("config.ini"):
                 b = line
             elif i == 2:
                 r = line
-    rcon = MCRcon(a, b, port=int(r))
+#    rcon = MCRcon(a, b, port=int(r))
+    rcon = ConanExilesRCON(host=a, port=int(r), password=b)
 
 else:
     form.plainTextEditConsole.setPlainText(str("Конфиг не найден"))
@@ -53,7 +55,7 @@ def List():
     her = str("listplayers")
     result = rcon.command(her)
     form.plainTextEdit.setPlainText(str(result))
-#    print(result)
+    print(result)
 def ClickOnbut():
     resul = rcon.command(str(form.lineEditCmd.text()))
     form.plainTextEditConsole.setPlainText(str(resul))  # вывод информации в окно plainTextEditConsole
@@ -121,4 +123,3 @@ form.BanListButton.clicked.connect(BanLi)
 form.UnBanButton_4.clicked.connect(UnBn)
 
 app.exec()
-exit()
