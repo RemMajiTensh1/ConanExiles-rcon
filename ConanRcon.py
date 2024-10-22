@@ -1,6 +1,6 @@
 from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication
-#from mcrcon import MCRcon
+from PyQt5.QtCore import QTimer
 from ConRcon import ConanExilesRCON
 import os
 
@@ -13,6 +13,7 @@ form = Form()
 form.setupUi(window)
 window.show()
 
+auto_update_active = False
 
 if os.path.exists("config.ini"):
     form.plainTextEditConsole.setPlainText(str("Конфиг найден"))
@@ -27,15 +28,19 @@ if os.path.exists("config.ini"):
                 b = line
             elif i == 2:
                 r = line
-#    rcon = MCRcon(a, b, port=int(r))
     rcon = ConanExilesRCON(host=a, port=int(r), password=b)
-
 else:
     form.plainTextEditConsole.setPlainText(str("Конфиг не найден"))
     conf = open("config.ini", "w+")
     confin = f"(ip)\n(pass)\n(7778)"
     conf.write(str(confin))
     conf.close()
+
+
+update_timer = QTimer()
+
+# Интервал таймера 30 секунд
+update_timer.setInterval(30000)
 
 def SaveConf():
     conf = open("config.ini", "w+")
@@ -48,17 +53,32 @@ def SaveConf():
 
 def con_rcon():
     rcon.connect()
-    print("Подключение выполнено!")
-    form.plainTextEditConsole.setPlainText(str("Подключение выполнено!help для помощи"))
-def List():
+    if rcon.socket == None:
+        form.plainTextEditConsole.setPlainText(str("Не удалось авторизоваться. Проверьте пароль и настройки."))
+    else:
+        form.plainTextEditConsole.setPlainText(str("Подключение выполнено! help для помощи"))
 
+def List():
     her = str("listplayers")
     result = rcon.command(her)
     form.plainTextEdit.setPlainText(str(result))
     print(result)
+
+# Функция для управления таймером
+def listauto(state):
+    if state == 2:
+        form.plainTextEditConsole.setPlainText(str("Автообновление включено"))
+        print("Автообновление включено")
+        update_timer.start()
+    else:
+        form.plainTextEditConsole.setPlainText(str("Автообновление выключено"))
+        print("Автообновление выключено")
+        update_timer.stop()
+
+
 def ClickOnbut():
     resul = rcon.command(str(form.lineEditCmd.text()))
-    form.plainTextEditConsole.setPlainText(str(resul))  # вывод информации в окно plainTextEditConsole
+    form.plainTextEditConsole.setPlainText(str(resul))
 
 def BroadMess():
     Broad = str(f"broadcast {form.MesslineEdit.text()}")
@@ -90,25 +110,20 @@ def BanLi():
     BnList = rcon.command(BnLi)
     form.plainTextEditConsole.setPlainText(str(BnList))
 
-
 def UnBn():
     UnB = str(f"UnbanPlayer {form.IdxEdit.text()}")
     rcon.command(UnB)
     form.plainTextEditConsole.setPlainText(str(UnB))
     keyword_to_delete = form.IdxEdit.text()
-    # Путь к файлу, в котором нужно выполнить поиск и удаление
     file_path = "banlist.txt"
 
-    # Открываем файл на чтение и читаем его содержимое в список
     with open(file_path, "r") as f:
         lines = f.readlines()
 
-    # Открываем файл на запись и записываем в него все строки, кроме строк с ключевым словом
     with open(file_path, "w") as f:
         for line in lines:
             if keyword_to_delete not in line:
                 f.write(line)
-
 
 
 form.ClikBut.clicked.connect(ClickOnbut)
@@ -121,5 +136,9 @@ form.KickButton.clicked.connect(Kick)
 form.BanButton_2.clicked.connect(Ban)
 form.BanListButton.clicked.connect(BanLi)
 form.UnBanButton_4.clicked.connect(UnBn)
+form.checkBox.stateChanged.connect(listauto)
+
+# подключение таймера к list
+update_timer.timeout.connect(List)
 
 app.exec()
