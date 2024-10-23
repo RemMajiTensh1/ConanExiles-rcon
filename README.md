@@ -23,6 +23,7 @@ LevelFollowerUp (Поднять уровень вашему спутнику)
 Setstat level (Изменить уровень без затрагивания очков характеристик)
 MakeMeAdmin (Сделать игрока администратором (Не забудьте ввести пароль администратора))
 MakeMeNormal (Забрать админку)
+addundistributedattributepoints (Добавляет очки характеристик )
 
 ENG
 This rcon is based on the python library mcrcon.
@@ -48,11 +49,12 @@ LevelFollowerUp (Raise the level of your companion)
 Setstat level (Change the level without affecting the performance points)
 MakeMeAdmin (Make the player an administrator (Don't forget to enter the administrator password))
 MakeMeNormal (Pick up the admin panel)
+addundistributedattributepoints (Adds stat points)
 
 This program was developed by RemMajiTenshi for free general use.
 
 ![image](https://user-images.githubusercontent.com/120824638/235213861-1ab6f253-9213-4d54-a9a0-2c5028282e79.png)
 
-Готовая сборка/Finished Assembly:(https://drive.google.com/file/d/18YH2UJlD_2-R5btazxy2efJ5jN8k2kti/view?usp=share_link)
+Готовая сборка/Finished Assembly:(https://drive.google.com/file/d/1iKAloY0EcnOa8HbCJk-K9BFyvDow1JRC/view?usp=sharing)
 
 Данную программу разработал RemMajiTenshi для бесплатного общего пользования.
