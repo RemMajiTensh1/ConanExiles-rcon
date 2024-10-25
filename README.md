@@ -42,7 +42,7 @@ The program will additionally record the steam id and the reason for the ban in 
 When a player is unlocked, his steam id will be automatically deleted from the file banlist.txt
 If the program is closed when you connect, then try to reconnect.
 
-| Commands in the pop-up window.     |                 |
+| Commands in the retractable window..     |                 |
 | ------------- |:------------------:|
 | SpawnItem     | you need to register idx in the first window in the second window you need to register the item id and number.   |
 | TeleportToPlayer   | teleports the player idx to the player recorded in the second window |
