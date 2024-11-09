@@ -1,5 +1,5 @@
 # ConanExiles-rcon
-Готовая сборка/Latest build:[Last version](https://drive.google.com/file/d/1iKAloY0EcnOa8HbCJk-K9BFyvDow1JRC/view?usp=sharing)
+Последняя верся/Last version:[ ConRcon 2.0](https://github.com/RemMajiTensh1/ConanExiles-rcon/releases/tag/ConanExiles)
 ---
 RUS
 ---
@@ -64,7 +64,7 @@ This program was developed by RemMajiTenshi for free general use.
 ![image](https://github.com/user-attachments/assets/ca3bf19b-7d3a-432a-99a5-760d416d7374)
 
 
-
-Готовая сборка/Finished Assembly:[Last version](https://drive.google.com/file/d/1iKAloY0EcnOa8HbCJk-K9BFyvDow1JRC/view?usp=sharing)
+Готовая сборка/Finished Assembly:[Last version](https://github.com/RemMajiTensh1/ConanExiles-rcon/releases/tag/ConanExiles)
+Версия 1.5/Version 1.5:[Old version](https://drive.google.com/file/d/1iKAloY0EcnOa8HbCJk-K9BFyvDow1JRC/view?usp=sharing)
 
 Данную программу разработал RemMajiTenshi для бесплатного общего пользования.
