@@ -219,8 +219,6 @@ class MainUI(QMainWindow):
             KickPlay = f"KickPlayer platformid {self.IdxEdit.text()} {self.IdxEdit_2.text()}"
             self.rcon.command(KickPlay)
             self.plainTextEditConsole.setPlainText(str(KickPlay))
-        else:
-            self.plainTextEditConsole.setPlainText("RCON не настроен.")
 
     def Ban(self):
         if self.rcon:
